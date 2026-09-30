@@ -10,4 +10,4 @@ products:
     url: https://www.amazon.de/-/en/Philips-FY2422-30-NanoProtect-Purifier/dp/B01LYEJ3YL?th=1
     parser: amazon
     currency: EUR
-    limit: 40.00
+    limit: 39.00
