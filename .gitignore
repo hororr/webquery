@@ -1,0 +1,13 @@
+# Titkok és helyi adatok, soha ne kerüljenek a repóba
+.env
+*.env
+!.env.example
+data/
+*.sqlite3
+*.db
+debug/
+
+# Python
+.venv/
+__pycache__/
+*.pyc

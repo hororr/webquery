@@ -1,0 +1,13 @@
+# Figyelt termékek. A limit alatti ár (és elérhető termék) esetén megy e-mail.
+settings:
+  db_path: data/prices.sqlite3
+  # Várakozás két termék lekérése között (másodperc), hogy ne terheljük az oldalt.
+  delay_between_products: 5
+  request_timeout: 30
+
+products:
+  - name: Philips FY2422/30 NanoProtect szűrő
+    url: https://www.amazon.de/-/en/Philips-FY2422-30-NanoProtect-Purifier/dp/B01LYEJ3YL?th=1
+    parser: amazon
+    currency: EUR
+    limit: 40.00

@@ -1,0 +1,10 @@
+[Unit]
+Description=webquery árfigyelő (egy futás)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/webquery
+ExecStart=%h/webquery/.venv/bin/python -m webquery check
+# Az SMTP-titkok a %h/webquery/.env fájlból jönnek (a program maga tölti be).

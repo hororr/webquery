@@ -1,0 +1,1 @@
+"""Óránkénti árfigyelő."""
