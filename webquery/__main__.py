@@ -151,7 +151,7 @@ def cmd_test_mail(args, config) -> int:
 
 
 def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(prog="webquery", description="Óránkénti árfigyelő")
+    ap = argparse.ArgumentParser(prog="webquery", description="Napi árfigyelő")
     ap.add_argument("-c", "--config", default=str(ROOT / "config.yaml"))
     ap.add_argument("--env", default=str(ROOT / ".env"))
     sub = ap.add_subparsers(dest="cmd")

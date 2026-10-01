@@ -1,1 +1,1 @@
-"""Óránkénti árfigyelő."""
+"""Napi árfigyelő."""

@@ -1,6 +1,6 @@
-# webquery – óránkénti árfigyelő
+# webquery – napi árfigyelő
 
-Konzolos Python program, amely óránként lekéri a `config.yaml`-ban megadott termékek
+Konzolos Python program, amely naponta egyszer (magyar idő szerint 9:00 és 9:30 között) lekéri a `config.yaml`-ban megadott termékek
 árát (Amazonnál a fő ajánlatot, azaz a Buy Box árát és az elérhetőséget), elmenti
 SQLite-ba, és e-mailt küld, ha az ár a megadott limit alá megy.
 
@@ -50,7 +50,7 @@ journalctl --user -u webquery.service -n 20   # napló
 - Az ár euróban jön: a program az `i18n-prefs=EUR` sütit küldi, mert az Amazon
   egyébként a látogató országa szerint (pl. HUF) írná ki. Más pénznem esetén a mérés hibának számít.
 - E-mail csak akkor megy, ha a termék elérhető és az ár a limit alatt van, és vagy most
-  ment a limit alá, vagy tovább csökkent az utolsó értesítés óta (nincs óránkénti ismétlés).
+  ment a limit alá, vagy tovább csökkent az utolsó értesítés óta (nincs ismétlés).
 - CAPTCHA vagy tiltás esetén a program nem próbálja megkerülni: `blocked` státusszal
   rögzíti, és hibakóddal lép ki. Ha az oldal szerkezete változik, a HTML a `debug/` mappába kerül.
 - Titkok csak a `.env` fájlban vannak, ami a `.gitignore`-ban szerepel.
